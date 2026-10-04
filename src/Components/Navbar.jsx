@@ -21,6 +21,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -35,6 +36,7 @@ export default function Navbar() {
           </span>
         </Link>
 
+        {/* Desktop links */}
         <div className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} className={linkClass}>
@@ -50,6 +52,7 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Mobile button */}
         <button
           onClick={() => setOpen(!open)}
           className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden"
@@ -79,6 +82,7 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile menu */}
       {open && (
         <div className="border-t border-slate-200 bg-white px-6 pb-4 md:hidden">
           <div className="flex flex-col gap-1 pt-3">
